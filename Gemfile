@@ -24,6 +24,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "font-awesome-rails"
 #devise
 gem 'devise', '~> 3.4.0'
+#hirb
+gem 'hirb', '~> 0.7.3'
+#annotate
+gem 'annotate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

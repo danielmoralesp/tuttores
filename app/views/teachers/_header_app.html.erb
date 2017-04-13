@@ -1,0 +1,38 @@
+<body class="landing-page hide-sidebar">
+
+<!-- Header -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">TutorMap</a>
+            <div class="brand-desc">
+                Profesores Particulares
+            </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a class="page-scroll" href="#page-top">Home</a></li>
+              <li><a class="page-scroll" page-scroll href="#features">Features</a></li>
+              <li><%= link_to 'Solicitar Tutoria', new_tutoring_path, class: "page-scroll" %></li>
+              <li><%= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to current_user.name, current_user, class: "page-scroll" %></li>
+                  <li><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "page-scroll" %></li>
+                <% else %>
+                  <li><%= link_to 'Iniciar Sesión', new_user_session_path, class: "page-scroll" %></li>
+                  <li><%= link_to 'Registrarse', new_user_registration_path, class: "page-scroll" %></li>
+                <% end %>
+                <% if user_signed_in? && current_user.admin? %>
+                  <li><%= link_to "Panel", admins_path, class: "page-scroll" %></li>
+                <% end %>
+              <li><%= link_to 'Registro Profesor', new_teacher_path, class: "navbar-brand"  %></li>
+          </ul>
+        </div>
+    </div>
+</nav>
