@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tutormap</title>
+  <title>Tuttores</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    "metisMenu" %>
+  <%= stylesheet_link_tag    "animate" %>
+  <%= stylesheet_link_tag    "bootstrap.min" %>
+
+  <%= stylesheet_link_tag    "pe-icon-7-stroke" %>
+  <%= stylesheet_link_tag    "helper" %>
+  <%= stylesheet_link_tag    "style" %>
 </head>
 
 <%= yield %>
+
+  <%= javascript_include_tag "jquery.min.min" %>
+  <%= javascript_include_tag "jquery-ui.min" %>
+  <%= javascript_include_tag "jquery.slimscroll.min" %>
+  <%= javascript_include_tag "bootstrap.min" %>
+  <%= javascript_include_tag "metisMenu.min" %>
+  <%= javascript_include_tag "icheck.min" %>
+  <%= javascript_include_tag "index" %>
+  <%= javascript_include_tag "homer" %>
 
   <script>
     $(".alert").fadeIn(500).css("opacity","0.85").delay( 6000 ).slideUp( 1000 );
