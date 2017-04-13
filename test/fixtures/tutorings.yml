@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  num_hours: 1
+  hour: MyString
+  user_id: 
+  teacher_id: 
+  city_id: 
+  topic_id: 
+  country_id: 
+  subject_id: 
+
+two:
+  place: MyString
+  num_hours: 1
+  hour: MyString
+  user_id: 
+  teacher_id: 
+  city_id: 
+  topic_id: 
+  country_id: 
+  subject_id: 

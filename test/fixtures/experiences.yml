@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cargo: MyString
+  empresa: MyString
+  mes_inicio: MyString
+  dia_inicio: MyString
+  mes_fin: MyString
+  dia_fin: MyString
+  ubicacion: MyString
+  description: MyText
+  teacher_id: 
+  ano_inicio: MyString
+  ano_fin: MyString
+
+two:
+  cargo: MyString
+  empresa: MyString
+  mes_inicio: MyString
+  dia_inicio: MyString
+  mes_fin: MyString
+  dia_fin: MyString
+  ubicacion: MyString
+  description: MyText
+  teacher_id: 
+  ano_inicio: MyString
+  ano_fin: MyString

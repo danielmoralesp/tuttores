@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phone: MyString
+  image_url: MyString
+  verify_bgd_check: false
+  complete_exam: false
+  about_me: MyText
+  address: MyString
+  verify_phone: false
+  role: 1
+  user_id: 
+  city_id: 
+  country_id: 
+
+two:
+  phone: MyString
+  image_url: MyString
+  verify_bgd_check: false
+  complete_exam: false
+  about_me: MyText
+  address: MyString
+  verify_phone: false
+  role: 1
+  user_id: 
+  city_id: 
+  country_id: 
