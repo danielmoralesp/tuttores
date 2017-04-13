@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutormap</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<%= yield %>
+
+  <script>
+    $(".alert").fadeIn(500).css("opacity","0.85").delay( 6000 ).slideUp( 1000 );
+    $('.alerts').on('click','.alert',function(){ $(this).remove() });
+  </script>
+
+</html>

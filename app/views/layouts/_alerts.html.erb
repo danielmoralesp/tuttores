@@ -1,0 +1,25 @@
+<div class="alerts text-center">
+  <% if flash[:notice] %>
+  <div class="col-lg-12">
+    <br>
+      <div class="hpanel alert alert-success">
+          <div>
+              <p>
+                  <%= flash[:notice] %>
+              </p>
+          </div>
+      </div>
+  </div>
+  <% elsif flash[:alert] %>
+  <div class="col-lg-12">
+    <br>
+      <div class="hpanel alert alert-danger">
+          <div>
+              <p>
+                  <%= flash[:alert] %>
+              </p>
+          </div>
+      </div>
+  </div>
+  <% end %>
+</div>

@@ -6,6 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+  <%= stylesheet_link_tag    "helper" %>
+  <%= stylesheet_link_tag    "pe-icon-7-stroke" %>
+  <%= stylesheet_link_tag    "Pe-icon-7-stroke" %>
+  <%= stylesheet_link_tag    "bootstrap-select" %>
+  <%= stylesheet_link_tag    "prism" %>
+
   <%= stylesheet_link_tag    "bootstrap.min" %>
   <%= stylesheet_link_tag    "all" %>
   <%= stylesheet_link_tag    "animate" %>
@@ -37,9 +43,15 @@
   <%= stylesheet_link_tag    "toastr.min" %>
 
 </head>
-<body>
 
+<%= render 'layouts/alerts' %>
 <%= yield %>
+
+  <%= javascript_include_tag "bootstrap-select.min" %>
+  <%= javascript_include_tag "jquery-1.11.1.min" %>
+  <%= javascript_include_tag "query-1.11.1.min.map" %>
+  <%= javascript_include_tag "prism" %>
+  <%= javascript_include_tag "main" %>
 
   <%= javascript_include_tag "bootstrap.min" %>
   <%= javascript_include_tag "jquery.min.min" %>
@@ -85,5 +97,8 @@
   <%= javascript_include_tag "sweet-alert.min" %>
   <%= javascript_include_tag "toastr.min" %>
 
-</body>
+  <script>
+    $(".alert").fadeIn(500).css("opacity","0.85").delay( 6000 ).slideUp( 1000 );
+    $('.alerts').on('click','.alert',function(){ $(this).remove() });
+  </script>
 </html>

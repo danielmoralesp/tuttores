@@ -10,6 +10,19 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
+#FONTS
+Rails.application.config.assets.precompile += %w( helper.css )
+Rails.application.config.assets.precompile += %w( pe-icon-7-stroke.css )
+Rails.application.config.assets.precompile += %w( Pe-icon-7-stroke.css )
+Rails.application.config.assets.precompile += %w( bootstrap-select.css )
+Rails.application.config.assets.precompile += %w( prism.css )
+Rails.application.config.assets.precompile += %w( bootstrap-select.min.js )
+Rails.application.config.assets.precompile += %w( jquery-1.11.1.min.js )
+Rails.application.config.assets.precompile += %w( jquery-1.11.1.min.map )
+Rails.application.config.assets.precompile += %w( prism.js )
+Rails.application.config.assets.precompile += %w( main.js )
+
+#CSS
 Rails.application.config.assets.precompile += %w( all.css )
 Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( awesome-bootstrap-checkbox.css )
@@ -41,7 +54,7 @@ Rails.application.config.assets.precompile += %w( summernote.css )
 Rails.application.config.assets.precompile += %w( sweet-alert.css )
 Rails.application.config.assets.precompile += %w( toastr.min.css )
 
-
+#JS
 Rails.application.config.assets.precompile += %w( jquery.flot.spline/index.js )
 Rails.application.config.assets.precompile += %w( bootstrap-clockpicker.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap-datepicker.min.js )
