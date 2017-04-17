@@ -10,28 +10,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">TutorMap</a>
+            <a href="/" class="navbar-brand">Tuttores</a>
             <div class="brand-desc">
                 Profesores Particulares
             </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a class="page-scroll" href="#page-top">Home</a></li>
-              <li><a class="page-scroll" page-scroll href="#features">Features</a></li>
-              <li><%= link_to 'Solicitar Tutoria', new_tutoring_path, class: "page-scroll" %></li>
-              <li><%= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>
+              <li class="<%= active_class(root_path) %>"><a class="page-scroll" href="/">Home</a></li>
+              <li class="<%= active_class(teachers_path) %>"><%= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>
+              <li class="<%= active_class(new_tutoring_path) %>"><%= link_to 'Solicitar Tutoria', new_tutoring_path, class: "page-scroll" %></li>
                 <% if user_signed_in? %>
-                  <li><%= link_to current_user.name, current_user, class: "page-scroll" %></li>
-                  <li><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "page-scroll" %></li>
+                  <li class="<%= active_class(current_user) %>"><%= link_to current_user.name, current_user, class: "page-scroll" %></li>
+                  <li class="<%= active_class(destroy_user_session_path) %>"><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "page-scroll" %></li>
                 <% else %>
-                  <li><%= link_to 'Iniciar Sesión', new_user_session_path, class: "page-scroll" %></li>
-                  <li><%= link_to 'Registrarse', new_user_registration_path, class: "page-scroll" %></li>
+                  <li class="<%= active_class(new_user_session_path) %>"><%= link_to 'Iniciar Sesión', new_user_session_path, class: "page-scroll" %></li>
+                  <li class="<%= active_class(new_user_registration_path) %>"><%= link_to 'Registrarse', new_user_registration_path, class: "page-scroll" %></li>
                 <% end %>
                 <% if user_signed_in? && current_user.admin? %>
-                  <li><%= link_to "Panel", admins_path, class: "page-scroll" %></li>
+                  <li class="<%= active_class(admins_path) %>"><%= link_to "Panel", admins_path, class: "page-scroll" %></li>
                 <% end %>
-              <li><%= link_to 'Registro Profesor', new_teacher_path, class: "navbar-brand"  %></li>
+              <li class="<%= active_class(new_teacher_path) %>"><%= link_to 'Registro como Profesor', new_teacher_path, class: "navbar-brand"  %></li>
           </ul>
         </div>
     </div>
