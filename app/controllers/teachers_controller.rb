@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  before_action :authenticate_user!, except: [ :landing, :index, :show ]
+  before_action :authenticate_user!, except: [ :landing, :index ]
   before_action :is_teacher?, except: [ :landing, :index, :show, :search ]
   before_filter :validate_user, only: [:edit, :update, :destroy]
 
