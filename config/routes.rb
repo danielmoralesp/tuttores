@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
-  resources :teachers
+  resources :teachers do
+    collection do
+      get :search
+    end
+  end
+
   resources :tutorings, only: [:new, :create]
   resources :users, only: [:show]
   resources :admins, only: [:index, :show]

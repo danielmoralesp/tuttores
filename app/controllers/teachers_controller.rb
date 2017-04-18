@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
   before_action :authenticate_user!, except: [ :landing, :index, :show ]
-  before_action :is_teacher?, except: [ :landing, :index, :show ]
+  before_action :is_teacher?, except: [ :landing, :index, :show, :search ]
   before_filter :validate_user, only: [:edit, :update, :destroy]
 
   def landing
@@ -8,7 +8,7 @@ class TeachersController < ApplicationController
   end
 
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.all.order(created_at: :desc)
     render :layout => 'landing'
   end
 
@@ -58,6 +58,14 @@ class TeachersController < ApplicationController
     @teacher.destroy
     flash[:notice] = 'El profesor ha sido eliminado con éxito'
     redirect_to teachers_path
+  end
+
+  def search
+    if params[:city].blank? && params[:topic].blank?
+      @teachers = Teacher.all.order(created_at: :desc)
+    else
+      @teachers = Teacher.search(params)
+    end
   end
 
   private

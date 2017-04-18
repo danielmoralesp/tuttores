@@ -21,4 +21,10 @@ class Teacher < ActiveRecord::Base
   def set_default_role
     self.role = :teacher
   end
+
+  def self.search(params)
+    teachers = Service.where(topic_id: params[:topic].to_i) if params[:topic].present?
+    teachers = Teacher.where(city_id: params[:city].to_i)
+    teachers
+  end
 end

@@ -1,0 +1,40 @@
+<%= render 'teachers/header_app' %>
+
+  <!-- Main Wrapper -->
+  <div id="wrapper">
+
+  <br><br><br>
+
+  <div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+
+            <div id="hbreadcrumb" class="pull-right m-t-lg">
+                <ol class="hbreadcrumb breadcrumb">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li>
+                        <span>App views</span>
+                    </li>
+                    <li class="active">
+                        <span>Search view</span>
+                    </li>
+                </ol>
+            </div>
+            <h2 class="font-light m-b-xs">
+                El resultado de su busqueda ha sido <%= @teachers.count %> profesores
+            </h2>
+            <small>Use search view to show search functionality.</small>
+        </div>
+    </div>
+  </div>
+
+  <%= render 'teachers/teacher_listings' %>
+
+  </div>
+
+</body>
