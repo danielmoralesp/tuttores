@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
 
     if @service.save
       flash[:notice] = 'El servicio ha sido creado con éxito'
-      redirect_to teachers_path
+      redirect_to teachers_landing_path
     else
       flash[:alert] = 'Algo fallo, el profesor no ha sido creado con éxito'
       render new_service_path
@@ -29,7 +29,7 @@ class ServicesController < ApplicationController
 
     if @service.update(service_params)
       flash[:notice] = 'El servicio ha sido actualizado con éxito'
-      redirect_to teachers_path
+      redirect_to teachers_landing_path
     else
       flash[:alert] = 'Algo fallo, el profesor no ha sido actualizado con éxito'
       render edit_service_path

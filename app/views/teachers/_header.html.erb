@@ -14,10 +14,10 @@
           <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
                   <li class="<%= active_class(root_path) %>"><a class="page-scroll" href="/">Home</a></li>
-                  <li class="<%= active_class(teachers_path) %>"><%= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>
+                  <!--<li class="<%#= active_class(teachers_path) %>"><%#= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>-->
                   <li class="<%= active_class(new_tutoring_path) %>"><%= link_to 'Solicitar Tutoria', new_tutoring_path, class: "page-scroll" %></li>
                     <% if user_signed_in? %>
-                      <li class="<%= active_class(current_user) %>"><%= link_to current_user.name, current_user, class: "page-scroll" %></li>
+                      <!--<li class="<%#= active_class(current_user) %>"><%#= link_to current_user.name, current_user, class: "page-scroll" %></li>-->
                       <li class="<%= active_class(destroy_user_session_path) %>"><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "page-scroll" %></li>
                     <% else %>
                       <li class="<%= active_class(new_user_session_path) %>"><%= link_to 'Iniciar Sesión', new_user_session_path, class: "page-scroll" %></li>
@@ -34,29 +34,17 @@
 
 
   <header id="page-top">
-      <%= render 'teachers/alerts' %>
+      <%= render 'welcome/alerts' %>
       <div class="container">
           <div class="heading">
               <h1>
-                  Registrate como Profesor
+                  Registrate como profesor
               </h1>
-              <span>Contrary to popular belief, Lorem Ipsum is not<br/> simply random text for print.</span>
+              <span>Contamos con un selecto grupo de Profesores Particulares en Medellin y Bogotá</span>
               <p class="small">
-                  Lorem Ipsum is simply dummy text of the printing and tLorem Ipsum is  Lorem Ipsum is simply dummy of the simply dummy text of the ypesetting.
+                  Puedes realizar hasta cientos de clases de Matemáticas, Física o Química.
               </p>
-              <a href="#" class="btn btn-success btn-sm">Learn more</a>
-          </div>
-          <div class="heading-image animate-panel" data-child="img-animate" data-effect="fadeInRight">
-              <p class="small">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <img class="img-animate" src="/assets/landing/c1.jpg">
-              <img class="img-animate" src="/assets/landing/c2.jpg">
-              <img class="img-animate" src="/assets/landing/c3.jpg">
-              <img class="img-animate" src="/assets/landing/c4.jpg">
-              <br/>
-              <img class="img-animate" src="/assets/landing/c5.jpg">
-              <img class="img-animate" src="/assets/landing/c6.jpg">
-              <img class="img-animate" src="/assets/landing/c7.jpg">
-              <img class="img-animate" src="/assets/landing/c8.jpg">
+              <%#= link_to 'Ver Profesores', teachers_path, class: "btn btn-success btn-sm"  %>
           </div>
       </div>
   </header>

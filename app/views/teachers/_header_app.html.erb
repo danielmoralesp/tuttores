@@ -21,7 +21,7 @@
               <li class="<%= active_class(teachers_path) %>"><%= link_to 'Listado Profesores', teachers_path, class: "page-scroll"  %></li>
               <li class="<%= active_class(new_tutoring_path) %>"><%= link_to 'Solicitar Tutoria', new_tutoring_path, class: "page-scroll" %></li>
                 <% if user_signed_in? %>
-                  <li class="<%= active_class(current_user) %>"><%= link_to current_user.name, current_user, class: "page-scroll" %></li>
+                  <!--<li class="<%#= active_class(current_user) %>"><%#= link_to current_user.name, current_user, class: "page-scroll" %></li>-->
                   <li class="<%= active_class(destroy_user_session_path) %>"><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: "page-scroll" %></li>
                 <% else %>
                   <li class="<%= active_class(new_user_session_path) %>"><%= link_to 'Iniciar Sesión', new_user_session_path, class: "page-scroll" %></li>
